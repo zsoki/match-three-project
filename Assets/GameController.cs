@@ -31,10 +31,6 @@ public class GameController : MonoBehaviour
         _boardSize = new Vector2(boardHorizontalSize, boardVerticalSize);
     }
 
-    void Update()
-    {
-    }
-
     void Start()
     {
         for (var horizontalIndex = 0; horizontalIndex < gameBoardParams.dimensions.x; horizontalIndex++)
