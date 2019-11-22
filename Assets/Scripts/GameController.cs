@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
         public float padding;
     }
 
-    public List<GameObject> gems;
+    public GameObject gem;
     public Transform board;
     public GameBoardParams gameBoardParams;
 
@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         _rng = new Random();
-        _gemSize = gems[0].GetComponent<BoxCollider2D>().size;
+        _gemSize = gem.GetComponent<BoxCollider2D>().size;
         var boardHorizontalSize = _gemSize.x * gameBoardParams.dimensions.x + gameBoardParams.padding *
                                   (gameBoardParams.dimensions.x - 1);
         var boardVerticalSize = _gemSize.y * gameBoardParams.dimensions.y + gameBoardParams.padding *
@@ -60,6 +60,6 @@ public class GameController : MonoBehaviour
 
     private GameObject GetRandomGemGameObject()
     {
-        return gems[_rng.Next(gems.Count)];
+        return gem[_rng.Next(gem.Count)];
     }
 }
