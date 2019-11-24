@@ -150,16 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613dd6a374aacf74f878a945075b875f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gems:
-  - {fileID: 7077999246103721961, guid: 0e89a5863e0efd747afcfcbdac2ab83f, type: 3}
-  - {fileID: 286718031045896956, guid: 2fff59e0f934b9846a9ce5617634fdf4, type: 3}
-  - {fileID: 8897565661376911344, guid: a49bdbb41e90bc14c83469485cdd5141, type: 3}
-  - {fileID: 2259600743288441723, guid: 1d4f527d00811f74d973597d1dccf530, type: 3}
-  - {fileID: 2764994338826437109, guid: 9765d5dcfe8f36140bcdeeda15166718, type: 3}
+  gem: {fileID: 7077999246103721961, guid: 0e89a5863e0efd747afcfcbdac2ab83f, type: 3}
   board: {fileID: 496657899}
   gameBoardParams:
-    dimensions: {x: 8, y: 8}
-    padding: 0.5
+    dimensions: {x: 10, y: 10}
+    padding: 0.25
 --- !u!4 &434314891
 Transform:
   m_ObjectHideFlags: 0

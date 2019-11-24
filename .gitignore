@@ -37,6 +37,7 @@ $RECYCLE.BIN/
 /[Mm]emoryCaptures/
 
 /Assets/Packages/
+/Assets/StoreAssets/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta

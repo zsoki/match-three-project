@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
 
 public class GameController : MonoBehaviour
 {
@@ -16,13 +14,11 @@ public class GameController : MonoBehaviour
     public Transform board;
     public GameBoardParams gameBoardParams;
 
-    private Random _rng;
     private Vector2 _gemSize;
     private Vector2 _boardSize;
 
     private void Awake()
     {
-        _rng = new Random();
         _gemSize = gem.GetComponent<BoxCollider2D>().size;
         var boardHorizontalSize = _gemSize.x * gameBoardParams.dimensions.x + gameBoardParams.padding *
                                   (gameBoardParams.dimensions.x - 1);
@@ -31,7 +27,7 @@ public class GameController : MonoBehaviour
         _boardSize = new Vector2(boardHorizontalSize, boardVerticalSize);
     }
 
-    void Start()
+    private void Start()
     {
         for (var horizontalIndex = 0; horizontalIndex < gameBoardParams.dimensions.x; horizontalIndex++)
         {
@@ -49,17 +45,10 @@ public class GameController : MonoBehaviour
 
     private void ForEachBoardColumn(int horizontalIndex, int verticalIndex)
     {
-        var randomGem = GetRandomGemGameObject();
-        
         var horizontalPosition = _gemSize.x / 2 + horizontalIndex * (_gemSize.x + gameBoardParams.padding);
         var verticalPosition = _gemSize.y / 2 + verticalIndex * (_gemSize.y + gameBoardParams.padding);
         var gemCoordinate = new Vector2(horizontalPosition, verticalPosition) - _boardSize / 2;
         
-        Instantiate(randomGem, gemCoordinate, Quaternion.identity, board.transform);
-    }
-
-    private GameObject GetRandomGemGameObject()
-    {
-        return gem[_rng.Next(gem.Count)];
+        Instantiate(gem, gemCoordinate, Quaternion.identity, board.transform);
     }
 }

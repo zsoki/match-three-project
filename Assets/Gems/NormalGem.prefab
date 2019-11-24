@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7077999246103721958}
   - component: {fileID: 4005775748766964034}
   - component: {fileID: 6445390545742101178}
+  - component: {fileID: 3637484727490733733}
   m_Layer: 0
-  m_Name: Gem
+  m_Name: NormalGem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,5 +122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1785e3b992ee14fbf96079103ac790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSize: 1
-  growFactor: 1
+  gemSet: {fileID: 11400000, guid: a1bb72a484ac5e745bfee6752b6dd638, type: 2}
+--- !u!114 &3637484727490733733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077999246103721961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d604d86f5e45a9884c4fd26c18ceab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSize: 1.3
+  growFactor: 4
