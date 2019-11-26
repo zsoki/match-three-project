@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gem: {fileID: 7077999246103721961, guid: 0e89a5863e0efd747afcfcbdac2ab83f, type: 3}
   board: {fileID: 11400000, guid: 033e8f1737a49594baa1ac36a67cd1c0, type: 2}
-  padding: 1.2
+  padding: 0.2

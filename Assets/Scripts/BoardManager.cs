@@ -13,13 +13,14 @@ public class BoardManager : MonoBehaviour
     private void Awake()
     {
         _gemSize = gem.GetComponent<BoxCollider2D>().size;
-        var boardHorizontalSize = _gemSize.x * board.height.value + padding * (board.height.value - 1);
-        var boardVerticalSize = _gemSize.y * board.height.value + padding * (board.height.value - 1);
-        _boardSize = new Vector2(boardHorizontalSize, boardVerticalSize);
     }
 
     private void Start()
     {
+        var boardHorizontalSize = _gemSize.x * board.height.value + padding * (board.height.value - 1);
+        var boardVerticalSize = _gemSize.y * board.height.value + padding * (board.height.value - 1);
+        _boardSize = new Vector2(boardHorizontalSize, boardVerticalSize);
+        
         for (var horizontalIndex = 0; horizontalIndex < board.height.value; horizontalIndex++)
         {
             ForEachBoardLine(horizontalIndex);
